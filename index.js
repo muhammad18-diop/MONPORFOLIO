@@ -20,7 +20,9 @@ let monBtn = document.getElementById("btn")
 
 monBtn.addEventListener("click", () => {
     document.body.classList.toggle("active")
-    
+    if(document.body.classList.contains("active")){
+      monBtn.classList.add("fa-solid", "fa-sun")
+    }
 })
 
 let plus1 = document.getElementById("plus1")
@@ -65,7 +67,7 @@ const RegEmail = /^[a-zA-Z0-9.-_]+@[a-zA-Z0-9.-]+\.[a-z]+$/
 
 form.addEventListener("submit", (e) => {
    e.preventDefault();
-if(email != RegEmail){
+if(email ){
    mess.textContent = "Entrer l'email au bon format"
    mess.style.color = "red"
    mess.style.fontWeight = "bold"
