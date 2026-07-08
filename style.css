@@ -810,6 +810,7 @@ ul li:nth-child(1) i{
     display: none;
 }
 
+
 body.active  .hero,
 body.active .service,
 body.active .price-plan,
@@ -920,6 +921,8 @@ body.active .aside h3{
     color: white;
     font-weight: bold;
 }
+
+
  
 
 
@@ -931,7 +934,7 @@ body.active .aside h3{
 
 @media (max-width: 768px){
     .leppfi{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .droite{
@@ -944,10 +947,12 @@ body.active .aside h3{
     }
     .aside{
         text-align: center;
+        width: 90%;
+        
     }
 
     .milieu{
-        width: 100%;
+        width: 95%;
     }
     .presentation{
         flex-direction: column;

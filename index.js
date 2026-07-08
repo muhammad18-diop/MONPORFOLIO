@@ -1,10 +1,13 @@
 let menu = document.getElementById("menu-btn");
 let nav = document.querySelector(".droite");
+let gauche = document.querySelector(".aside")
 
 menu.addEventListener("click", () => {
    nav.classList.toggle("active");
-  
+   
 })
+
+
 
 let liens = document.querySelectorAll('li')
 
@@ -17,13 +20,32 @@ liens.forEach(lien => {
 
 let monBtn = document.getElementById("btn")
 
-
 monBtn.addEventListener("click", () => {
-    document.body.classList.toggle("active")
-    if(document.body.classList.contains("active")){
-      monBtn.classList.add("fa-solid", "fa-sun")
+    document.body.classList.toggle("active");
+
+    if (document.body.classList.contains("active")) {
+        localStorage.setItem("dark", "active");
+        monBtn.classList.remove("fa-moon");
+        monBtn.classList.add("fa-sun");
+    } else {
+        localStorage.setItem("dark", "inactive");
+        monBtn.classList.remove("fa-sun");
+        monBtn.classList.add("fa-moon");
     }
-})
+});
+
+
+const darkmode = localStorage.getItem("dark");
+
+if (darkmode === "active") {
+    document.body.classList.add("active");
+    monBtn.classList.add("fa-sun");
+} else {
+    document.body.classList.remove("active");
+    monBtn.classList.add("fa-moon");
+}
+
+
 
 let plus1 = document.getElementById("plus1")
 let cache = document.getElementById("cacher1")
@@ -67,7 +89,7 @@ const RegEmail = /^[a-zA-Z0-9.-_]+@[a-zA-Z0-9.-]+\.[a-z]+$/
 
 form.addEventListener("submit", (e) => {
    e.preventDefault();
-if(email == RegEmail){
+if(email != RegEmail){
    mess.textContent = "Entrer l'email au bon format"
    mess.style.color = "red"
    mess.style.fontWeight = "bold"
