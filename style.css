@@ -516,6 +516,7 @@ html{
 
 .porfolio{
     text-align: center;
+    margin-top: 5%;
 }
 
 .porfolio p{
@@ -525,7 +526,7 @@ html{
 .porfolio-projet{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 10%;
     padding-top: 3%;
     margin-right: 15px;
 }
@@ -541,7 +542,6 @@ html{
     background-color: white;
     padding: 10px;
     width: 100%;
-    height: auto;
     
 }
 
@@ -551,13 +551,16 @@ html{
     object-fit: cover;
     border-radius: 7px;
 }
+.projet p{
+    font-weight: bold;
+}
 .porfolio-projet .projet:nth-child(1){
     margin-right: 5%;
 }
 .porfolio-projet .projet:nth-child(1) p{
     text-align: center;
     color: black;
-    font-weight: bold;
+    
 }
 
 .porfolio-projet .projet:nth-child(1) a{
@@ -569,14 +572,14 @@ html{
 
 .porfolio-projet .projet:nth-child(2) img{
     width: 90%;
-    height: 200%;
+    
 }
 
 .porfolio-projet .projet:nth-child(2) p{
     text-align: center;
-   margin-top: 100%;
+  
     font-size: 18px;
-    font-weight: bold;
+    
    
     margin-left: 5%;
 }
@@ -594,9 +597,8 @@ html{
 
 .porfolio .projet:nth-child(3) p{
     text-align: center;
+    font-size: 18px;
     
-    font-size: 16px;
-    font-weight: bold;
     
     
 }
@@ -612,9 +614,8 @@ html{
 
 .porfolio .projet:nth-child(4) p{
     text-align: center;
-    
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 18px;
+
    
 
 }
@@ -628,7 +629,7 @@ html{
 
 .blogs{
     text-align: center;
-    margin-top: 5%;
+    margin-top: 35%;
 }
 
 .blogs p{
@@ -938,12 +939,22 @@ body.active .aside h3{
     }
 
     .droite{
-        display: none;
+      position: fixed;
+        top: 0;
+        right: -100%; 
+        width: 100px;
+        height: 100vh;
+        background-color: white;
+        box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
         margin: 0;
+        padding-top: 60px;
+        transition: right 0.3s ease; 
+        z-index: 999; 
     }
 
     .liste-menu {
         gap: 30px;
+        
     }
     .aside{
         text-align: center;
@@ -1109,7 +1120,7 @@ body.active .aside h3{
     }
 
     .droite.active{
-   display: block;
+   right: 0;
   
    
 }

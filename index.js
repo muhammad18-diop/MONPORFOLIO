@@ -1,6 +1,11 @@
 let menu = document.getElementById("menu-btn");
 let nav = document.querySelector(".droite");
 let gauche = document.querySelector(".aside")
+let div = document.querySelector(".porfolio-projet")
+let tous = document.getElementById("tous");
+let frontend = document.getElementById("frontend");
+let backend = document.getElementById("backend");
+
 
 menu.addEventListener("click", () => {
    nav.classList.toggle("active");
@@ -121,3 +126,111 @@ if(email != RegEmail){
       mess.textContent = "Erreur réseau"
    })
 })
+
+
+async function afficheProjet(){
+   const response = await fetch("projet.json");
+   const data = await response.json();
+   console.log(data);
+   
+   data.forEach(m => {
+      div.innerHTML += `
+      <div class="projet">
+           <div class="projet-content">
+               
+                         </div>
+              <p>${m.text}</p>
+              <a href="${m.lien}" style="text-decoration: none;
+    color: white;
+    background-color: #ffb300;
+    padding: 5px;" target="_blank">Voir le site</a>
+               <br>
+               <a href="${m.lienGit}" style="text-decoration: none;
+    color: white;
+    background-color: #ffb300;
+    padding: 5px;" >Code GitHub</a>
+                              
+                 </div>
+      `
+   })
+}
+
+async function front(){
+   div.innerHTML ="";
+    const response = await fetch("projet.json");
+   const data = await response.json();
+   console.log(data);
+
+   const frontend = data.filter(p => p.categorie === "frontend")
+   console.log(frontend);
+   
+   
+   frontend.forEach(m => {
+      div.innerHTML += `
+      <div class="projet">
+           <div class="projet-content">
+               
+                         </div>
+              <p>${m.text}</p>
+              <a href="${m.lien}" target="_blank" style="text-decoration: none;
+    color: white;
+    background-color: #ffb300;
+    padding: 5px;" target="_blank">Voir le site</a>
+               <br>
+               <a href="${m.lienGit}" style="text-decoration: none;
+    color: white;
+    background-color: #ffb300;
+    padding: 5px;">Code GitHub</a>
+                              
+                 </div>
+      `
+   })
+}
+
+async function back(){
+   div.innerHTML ="";
+    const response = await fetch("projet.json");
+   const data = await response.json();
+   console.log(data);
+
+   const frontend = data.filter(p => p.categorie === "backend")
+   console.log(frontend);
+   
+   
+   frontend.forEach(m => {
+      div.innerHTML += `
+      <div class="projet">
+           <div class="projet-content">
+               
+                         </div>
+              <p>${m.text}</p>
+              <a href="${m.lien}" target="_blank" style="text-decoration: none;
+    color: white;
+    background-color: #ffb300;
+    padding: 5px;" target="_blank">Voir le site</a>
+               <br>
+               <a href="${m.lienGit}" style="text-decoration: none;
+    color: white;
+    background-color: #ffb300;
+    padding: 5px;">Code GitHub</a>
+                              
+                 </div>
+      `
+   })
+}
+
+tous.addEventListener("click", () => {
+   div.innerHTML = "";
+   afficheProjet();
+})
+
+frontend.addEventListener("click", () => {
+   
+   front();
+})
+
+backend.addEventListener("click", () => {
+   back();
+})
+
+afficheProjet();
