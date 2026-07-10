@@ -1,12 +1,5 @@
 [
     {
-        "image": "image/x.jpg",
-        "text": "Développement d’un site web pour une entreprise de télécommunications I HelpSn basé à Dakar afin de présenter ses services et renforcer sa présence en ligne. Le projet met l’accent sur un design moderne, une navigation intuitive et une expérience utilisateur optimisée.",
-        "lien": "https://ihelpsnn.netlify.app",
-        "lienGit": "",
-        "categorie": "frontend"
-    },
-    {
         "image": "image/ihelpsn5.jpg",
         "text": "Développement complet d’une plateforme web de préparation aux concours administratifs, incluant la mise en place de l’authentification des utilisateurs, d’un tableau de bord administrateur, l’intégration d’une base de données PostgreSQL pour la gestion des utilisateurs et des contenus, ainsi que le déploiement et les tests de l’application.",
         "lien": "https://muhammad18-diop.github.io/frontendSunulearn/",
@@ -15,7 +8,7 @@
     },
     {
         "image": "image/rassoulshop.jpg",
-        "text": "Ce projet est un site e-commerce que j’ai développé pour permettre aux utilisateurs de découvrir et d’acheter des produits en ligne facilement. Il propose une interface simple, une navigation fluide et un design responsive adapté aux différents écrans..",
+        "text": "Ce projet est un landing page de  site e-commerce que j’ai développé pour permettre aux utilisateurs de découvrir et d’acheter des produits en ligne facilement. Il propose une interface simple, une navigation fluide et un design responsive adapté aux différents écrans..",
         "lien": "https://rassoulshopp.netlify.app/",
         "lienGit": "",
         "categorie": "frontend"
@@ -24,7 +17,7 @@
         "image": "image/aicha charity.jpg",
         "text": "Développement d’un site web pour l’association AICHA Charity afin de présenter ses actions humanitaires, ses projets et ses initiatives sociales. Le site permet d’informer les visiteurs, de valoriser les activités de l’association et de faciliter la communication avec le public.",
         "lien": "https://aicha-charity.netlify.app/",
-        "lienGit": "",
+        "lienGit": "#",
         "categorie": "frontend"
     },
     {
@@ -33,6 +26,14 @@
         "lien": "",
         "lienGit": "",
         "categorie": "backend"
+    },
+    
+    {
+        "image": "image/x.jpg",
+        "text": "Développement d’un site web pour une entreprise de télécommunications I HelpSn basé à Dakar afin de présenter ses services et renforcer sa présence en ligne. Le projet met l’accent sur un design moderne, une navigation intuitive et une expérience utilisateur optimisée.",
+        "lien": "https://ihelpsnn.netlify.app",
+        "lienGit": "",
+        "categorie": "frontend"
     },
     {
         "image": "image/aicha charity.jpg",
